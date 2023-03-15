@@ -1,7 +1,8 @@
 from rich.console import Console
 from rich.table import Table
 from os import get_terminal_size
-import numpy as np
+from numpy import zeros
+# import numpy as np
 
 import utils
 
@@ -250,7 +251,7 @@ if __name__ == '__main__':
 
             console.print("Calculating Bills ... ", style="yellow")
 
-            M=np.zeros((N,N))
+            M=zeros((N,N))
             people = acct_system.get_people()
             for i in range(len(acct_system.get_bills())):
                 _print_h_line(console, "white")
@@ -308,7 +309,7 @@ if __name__ == '__main__':
 
             console.print("Calculating Bills ... ", style="yellow")
 
-            M=np.zeros((N,N))
+            M=zeros((N,N))
             people = acct_system.get_people()
             for i in range(len(acct_system.get_bills())):
                 _print_h_line(console, "white")

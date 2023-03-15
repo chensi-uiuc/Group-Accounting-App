@@ -1,6 +1,6 @@
 from rich.console import Console
 from rich.table import Table
-from os import get_terminal_size
+# from os import get_terminal_size
 import numpy as np
 
 import utils_CHN as utils
@@ -19,7 +19,8 @@ def _print_end_caption(console):
     console.print("再见~~~ \n\n", style="green")
 
 def _print_h_line(console, style):
-    terminal_size = get_terminal_size().columns - 1
+    # terminal_size = get_terminal_size().columns - 1
+    terminal_size=30
     console.print("-"*terminal_size, style=style)
 
 def _print_tutorial(console):
@@ -43,7 +44,7 @@ def _print_new_system(console):
 
 def _print_add_person(console):
     # _print_h_line(console, "white")
-    console.print("添加新人物", stylechanchu="bold yellow")
+    console.print("添加新人物", style="bold yellow")
     console.print("请输入有效的人物名称", style="yellow")
     # _print_h_line(console, "white")
 
